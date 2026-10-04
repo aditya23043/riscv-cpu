@@ -1,0 +1,513 @@
+$date
+	Thu Oct  1 02:10:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_lw $end
+$scope module cpu $end
+$var wire 3 ! alu_0_0_ALUControl [2:0] $end
+$var wire 3 " alu_0_0_ALUControl_to_controller_0_0_ALUControl [2:0] $end
+$var wire 1 # alu_0_0_ALUSrc $end
+$var wire 1 $ alu_0_0_ALUSrc_to_controller_0_0_ALUSrc $end
+$var wire 32 % alu_0_0_imm [31:0] $end
+$var wire 32 & alu_0_0_rd1 [31:0] $end
+$var wire 32 ' alu_0_0_rd1_to_reg_file_0_0_rd1 [31:0] $end
+$var wire 32 ( alu_0_0_rd2 [31:0] $end
+$var wire 1 ) alu_0_0_reset $end
+$var wire 1 * alu_0_0_reset_to_reset $end
+$var wire 32 + alu_0_0_result_to_data_mem_0_0_address [31:0] $end
+$var wire 32 , alu_0_0_result_to_reg_file_0_0_alu_output [31:0] $end
+$var wire 1 - clk_gen_0_0_clk_to_data_mem_0_0_clk $end
+$var wire 1 . clk_gen_0_0_clk_to_pc_reg_0_0_clk $end
+$var wire 1 / clk_gen_0_0_clk_to_reg_file_0_0_clk $end
+$var wire 1 0 clk_gen_0_0_enable $end
+$var wire 1 1 clk_gen_0_0_enable_to_enable $end
+$var wire 1 2 clk_gen_0_0_reset $end
+$var wire 1 3 clk_gen_0_0_reset_to_reset $end
+$var wire 1 4 controller_0_0_MemWrite_to_data_mem_0_0_write_enable $end
+$var wire 2 5 controller_0_0_ResultSrc_to_reg_file_0_0_ResultSrc [1:0] $end
+$var wire 1 6 controller_0_0_beq_zero $end
+$var wire 1 7 controller_0_0_beq_zero_to_alu_0_0_zero $end
+$var wire 3 8 controller_0_0_f3 [2:0] $end
+$var wire 3 9 controller_0_0_f3_to_decoder_0_0_f3 [2:0] $end
+$var wire 7 : controller_0_0_f7 [6:0] $end
+$var wire 7 ; controller_0_0_opcode [6:0] $end
+$var wire 1 < controller_0_0_reset $end
+$var wire 1 = controller_0_0_reset_to_reset $end
+$var wire 32 > data_mem_0_0_address [31:0] $end
+$var wire 1 ? data_mem_0_0_clk $end
+$var wire 32 @ data_mem_0_0_read_data_to_reg_file_0_0_mem_data_output [31:0] $end
+$var wire 1 A data_mem_0_0_reset $end
+$var wire 1 B data_mem_0_0_reset_to_reset $end
+$var wire 32 C data_mem_0_0_write_data [31:0] $end
+$var wire 32 D data_mem_0_0_write_data_to_reg_file_0_0_rd2 [31:0] $end
+$var wire 1 E data_mem_0_0_write_enable $end
+$var wire 2 F decoder_0_0_ImmSrc [1:0] $end
+$var wire 2 G decoder_0_0_ImmSrc_to_controller_0_0_ImmSrc [1:0] $end
+$var wire 7 H decoder_0_0_f7_to_controller_0_0_f7 [6:0] $end
+$var wire 32 I decoder_0_0_immediate_to_alu_0_0_imm [31:0] $end
+$var wire 32 J decoder_0_0_instruction [31:0] $end
+$var wire 7 K decoder_0_0_opcode_to_controller_0_0_opcode [6:0] $end
+$var wire 5 L decoder_0_0_rd_to_reg_file_0_0_a3 [4:0] $end
+$var wire 1 M decoder_0_0_reset $end
+$var wire 1 N decoder_0_0_reset_to_reset $end
+$var wire 5 O decoder_0_0_rs1_to_reg_file_0_0_a1 [4:0] $end
+$var wire 5 P decoder_0_0_rs2_to_reg_file_0_0_a2 [4:0] $end
+$var wire 1 Q enable $end
+$var wire 32 R instr_mem_0_0_data_to_decoder_0_0_instruction [31:0] $end
+$var wire 8 S instr_mem_0_0_pc [7:0] $end
+$var wire 1 T instr_mem_0_0_reset $end
+$var wire 1 U instr_mem_0_0_reset_to_reset $end
+$var wire 1 V pc_reg_0_0_PCSrc $end
+$var wire 1 W pc_reg_0_0_PCSrc_to_controller_0_0_PCSrc $end
+$var wire 32 X pc_reg_0_0_branchImmTarget [31:0] $end
+$var wire 32 Y pc_reg_0_0_branchImmTarget_to_decoder_0_0_immediate [31:0] $end
+$var wire 1 Z pc_reg_0_0_clk $end
+$var wire 8 [ pc_reg_0_0_pc_to_instr_mem_0_0_pc [7:0] $end
+$var wire 1 \ pc_reg_0_0_reset $end
+$var wire 1 ] pc_reg_0_0_reset_to_reset $end
+$var wire 2 ^ reg_file_0_0_ResultSrc [1:0] $end
+$var wire 5 _ reg_file_0_0_a1 [4:0] $end
+$var wire 5 ` reg_file_0_0_a2 [4:0] $end
+$var wire 5 a reg_file_0_0_a3 [4:0] $end
+$var wire 32 b reg_file_0_0_alu_output [31:0] $end
+$var wire 1 c reg_file_0_0_clk $end
+$var wire 32 d reg_file_0_0_mem_data_output [31:0] $end
+$var wire 8 e reg_file_0_0_pc [7:0] $end
+$var wire 8 f reg_file_0_0_pc_to_pc_reg_0_0_pc [7:0] $end
+$var wire 32 g reg_file_0_0_rd2_to_alu_0_0_rd2 [31:0] $end
+$var wire 1 h reg_file_0_0_reset $end
+$var wire 1 i reg_file_0_0_reset_to_reset $end
+$var wire 1 j reg_file_0_0_write_enable $end
+$var wire 1 k reg_file_0_0_write_enable_to_controller_0_0_RegWrite $end
+$var wire 1 l reset $end
+$var wire 32 m reg_file_0_0_rd2 [31:0] $end
+$var wire 32 n reg_file_0_0_rd1 [31:0] $end
+$var wire 8 o pc_reg_0_0_pc [7:0] $end
+$var wire 32 p instr_mem_0_0_data [31:0] $end
+$var wire 5 q decoder_0_0_rs2 [4:0] $end
+$var wire 5 r decoder_0_0_rs1 [4:0] $end
+$var wire 5 s decoder_0_0_rd [4:0] $end
+$var wire 7 t decoder_0_0_opcode [6:0] $end
+$var wire 32 u decoder_0_0_immediate [31:0] $end
+$var wire 7 v decoder_0_0_f7 [6:0] $end
+$var wire 3 w decoder_0_0_f3 [2:0] $end
+$var wire 32 x data_mem_0_0_read_data [31:0] $end
+$var wire 2 y controller_0_0_ResultSrc [1:0] $end
+$var wire 1 z controller_0_0_RegWrite $end
+$var wire 1 { controller_0_0_PCSrc $end
+$var wire 1 | controller_0_0_MemWrite $end
+$var wire 2 } controller_0_0_ImmSrc [1:0] $end
+$var wire 1 ~ controller_0_0_ALUSrc $end
+$var wire 3 !" controller_0_0_ALUControl [2:0] $end
+$var wire 1 "" clk_gen_0_0_clk $end
+$var wire 1 #" alu_0_0_zero $end
+$var wire 32 $" alu_0_0_result [31:0] $end
+$scope module alu_0_0 $end
+$var wire 3 %" ALUControl [2:0] $end
+$var wire 1 # ALUSrc $end
+$var wire 32 &" imm [31:0] $end
+$var wire 32 '" rd1 [31:0] $end
+$var wire 32 (" rd2 [31:0] $end
+$var wire 1 ) reset $end
+$var wire 1 #" zero $end
+$var wire 32 )" operand2 [31:0] $end
+$var parameter 3 *" ALU_ADD $end
+$var parameter 3 +" ALU_AND $end
+$var parameter 3 ," ALU_OR $end
+$var parameter 3 -" ALU_SLT $end
+$var parameter 3 ." ALU_SUB $end
+$var parameter 3 /" ALU_XOR $end
+$var parameter 32 0" DATA_WIDTH $end
+$var reg 32 1" result [31:0] $end
+$upscope $end
+$scope module clk_gen_0_0 $end
+$var wire 1 0 enable $end
+$var wire 1 2 reset $end
+$var parameter 32 2" PERIOD $end
+$var reg 1 "" clk $end
+$upscope $end
+$scope module controller_0_0 $end
+$var wire 1 6 beq_zero $end
+$var wire 3 3" f3 [2:0] $end
+$var wire 7 4" f7 [6:0] $end
+$var wire 7 5" opcode [6:0] $end
+$var wire 1 < reset $end
+$var parameter 3 6" ALU_ADD $end
+$var parameter 3 7" ALU_AND $end
+$var parameter 3 8" ALU_OR $end
+$var parameter 3 9" ALU_SLT $end
+$var parameter 3 :" ALU_SUB $end
+$var parameter 32 ;" FUNCT3_WIDTH $end
+$var parameter 32 <" FUNCT7_WIDTH $end
+$var parameter 7 =" OPCODE_BTYPE $end
+$var parameter 7 >" OPCODE_ITYPE_ALU $end
+$var parameter 7 ?" OPCODE_JAL $end
+$var parameter 7 @" OPCODE_LW $end
+$var parameter 7 A" OPCODE_RTYPE $end
+$var parameter 7 B" OPCODE_SW $end
+$var parameter 32 C" OPCODE_WIDTH $end
+$var reg 3 D" ALUControl [2:0] $end
+$var reg 1 ~ ALUSrc $end
+$var reg 2 E" ImmSrc [1:0] $end
+$var reg 1 | MemWrite $end
+$var reg 1 { PCSrc $end
+$var reg 1 z RegWrite $end
+$var reg 2 F" ResultSrc [1:0] $end
+$upscope $end
+$scope module data_mem_0_0 $end
+$var wire 32 G" address [31:0] $end
+$var wire 1 ? clk $end
+$var wire 1 A reset $end
+$var wire 32 H" write_data [31:0] $end
+$var wire 1 E write_enable $end
+$var wire 32 I" read_data [31:0] $end
+$var parameter 32 J" ADDR_WIDTH $end
+$var parameter 32 K" DATA_WIDTH $end
+$var parameter 32 L" DEPTH $end
+$upscope $end
+$scope module decoder_0_0 $end
+$var wire 2 M" ImmSrc [1:0] $end
+$var wire 32 N" instruction [31:0] $end
+$var wire 1 M reset $end
+$var parameter 32 O" DATA_WIDTH $end
+$var parameter 32 P" FUNCT3_WIDTH $end
+$var parameter 32 Q" FUNCT7_WIDTH $end
+$var parameter 32 R" IMM_WIDTH $end
+$var parameter 32 S" NUM_REGS $end
+$var parameter 32 T" OPCODE_WIDTH $end
+$var parameter 32 U" REG_ADDR_WIDTH $end
+$var reg 3 V" f3 [2:0] $end
+$var reg 7 W" f7 [6:0] $end
+$var reg 32 X" immediate [31:0] $end
+$var reg 7 Y" opcode [6:0] $end
+$var reg 5 Z" rd [4:0] $end
+$var reg 5 [" rs1 [4:0] $end
+$var reg 5 \" rs2 [4:0] $end
+$upscope $end
+$scope module instr_mem_0_0 $end
+$var wire 8 ]" pc [7:0] $end
+$var wire 1 T reset $end
+$var wire 32 ^" data [31:0] $end
+$var parameter 32 _" ADDR_WIDTH $end
+$var parameter 32 `" DATA_WIDTH $end
+$var parameter 32 a" DEPTH $end
+$upscope $end
+$scope module pc_reg_0_0 $end
+$var wire 1 V PCSrc $end
+$var wire 32 b" branchImmTarget [31:0] $end
+$var wire 1 Z clk $end
+$var wire 1 \ reset $end
+$var parameter 32 c" DATA_WIDTH $end
+$var parameter 32 d" PC_START $end
+$var parameter 32 e" PC_WIDTH $end
+$var reg 8 f" pc [7:0] $end
+$upscope $end
+$scope module reg_file_0_0 $end
+$var wire 2 g" ResultSrc [1:0] $end
+$var wire 5 h" a1 [4:0] $end
+$var wire 5 i" a2 [4:0] $end
+$var wire 5 j" a3 [4:0] $end
+$var wire 32 k" alu_output [31:0] $end
+$var wire 1 c clk $end
+$var wire 32 l" mem_data_output [31:0] $end
+$var wire 8 m" pc [7:0] $end
+$var wire 1 h reset $end
+$var wire 1 j write_enable $end
+$var wire 32 n" rd2 [31:0] $end
+$var wire 32 o" rd1 [31:0] $end
+$var parameter 32 p" DATA_WIDTH $end
+$var parameter 32 q" NUM_REGS $end
+$var parameter 32 r" REG_ADDR_WIDTH $end
+$var integer 32 s" i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 r"
+b100000 q"
+b100000 p"
+b1000 e"
+b0 d"
+b100000 c"
+b100000000 a"
+b100000 `"
+b1000 _"
+b101 U"
+b111 T"
+b100000 S"
+b1100 R"
+b111 Q"
+b11 P"
+b100000 O"
+b100000000 L"
+b100000 K"
+b1000 J"
+b111 C"
+b100011 B"
+b110011 A"
+b11 @"
+b1101111 ?"
+b10011 >"
+b1100011 ="
+b111 <"
+b11 ;"
+b1 :"
+b101 9"
+b11 8"
+b10 7"
+b0 6"
+b1010 2"
+b100000 0"
+b100 /"
+b1 ."
+b101 -"
+b11 ,"
+b10 +"
+b0 *"
+$end
+#0
+$dumpvars
+bx s"
+b1010 o"
+bx n"
+b0 m"
+b10101011110011010001001000110100 l"
+b110 k"
+b110 j"
+b11100 i"
+b1001 h"
+b1 g"
+b0 f"
+b11111111111111111111111111111100 b"
+b11111111110001001010001100000011 ^"
+b0 ]"
+b11100 \"
+b1001 ["
+b110 Z"
+b11 Y"
+b11111111111111111111111111111100 X"
+b1111111 W"
+b10 V"
+b11111111110001001010001100000011 N"
+b0 M"
+b10101011110011010001001000110100 I"
+bx H"
+b110 G"
+b1 F"
+b0 E"
+b0 D"
+b11 5"
+b1111111 4"
+b10 3"
+b110 1"
+b11111111111111111111111111111100 )"
+bx ("
+b1010 '"
+b11111111111111111111111111111100 &"
+b0 %"
+b110 $"
+0#"
+0""
+b0 !"
+1~
+b0 }
+0|
+0{
+1z
+b1 y
+b10101011110011010001001000110100 x
+b10 w
+b1111111 v
+b11111111111111111111111111111100 u
+b11 t
+b110 s
+b1001 r
+b11100 q
+b11111111110001001010001100000011 p
+b0 o
+b1010 n
+bx m
+0l
+1k
+1j
+0i
+0h
+bx g
+b0 f
+b0 e
+b10101011110011010001001000110100 d
+0c
+b110 b
+b110 a
+b11100 `
+b1001 _
+b1 ^
+0]
+0\
+b0 [
+0Z
+b11111111111111111111111111111100 Y
+b11111111111111111111111111111100 X
+0W
+0V
+0U
+0T
+b0 S
+b11111111110001001010001100000011 R
+1Q
+b11100 P
+b1001 O
+0N
+0M
+b110 L
+b11 K
+b11111111110001001010001100000011 J
+b11111111111111111111111111111100 I
+b1111111 H
+b0 G
+b0 F
+0E
+bx D
+bx C
+0B
+0A
+b10101011110011010001001000110100 @
+0?
+b110 >
+0=
+0<
+b11 ;
+b1111111 :
+b10 9
+b10 8
+07
+06
+b1 5
+04
+03
+02
+11
+10
+0/
+0.
+0-
+b110 ,
+b110 +
+0*
+0)
+bx (
+b1010 '
+b1010 &
+b11111111111111111111111111111100 %
+1$
+1#
+b0 "
+b0 !
+$end
+#5
+bx d
+bx l"
+bx @
+bx x
+bx I"
+x6
+x7
+x#"
+bx b
+bx k"
+bx ,
+bx >
+bx G"
+bx +
+bx $"
+bx 1"
+bx &
+bx '"
+bx '
+bx n
+bx o"
+bx )"
+0j
+0k
+0z
+0#
+0$
+0~
+b0 ^
+b0 g"
+b0 5
+b0 y
+b0 F"
+bx X
+bx b"
+bx Y
+bx %
+bx &"
+bx I
+bx u
+bx X"
+bx :
+bx 4"
+bx H
+bx v
+bx W"
+bx `
+bx i"
+bx P
+bx q
+bx \"
+bx _
+bx h"
+bx O
+bx r
+bx ["
+bx 8
+bx 3"
+bx 9
+bx w
+bx V"
+bx a
+bx j"
+bx L
+bx s
+bx Z"
+bx ;
+bx 5"
+bx K
+bx t
+bx Y"
+bx J
+bx N"
+bx R
+bx p
+bx ^"
+b100 e
+b100 m"
+b100 f
+b100 S
+b100 ]"
+b100 [
+b100 o
+b100 f"
+1c
+1/
+1Z
+1.
+1?
+1-
+1""
+#10
+0c
+0/
+0Z
+0.
+0?
+0-
+0""
